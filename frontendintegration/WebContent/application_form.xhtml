@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/core"
+	>
+
+<h:head>
+	<title>CRUD Form</title>
+	<style>
+input {
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	border: 2px solid green;
+	box-sizing: border-box;
+}
+
+.button {
+	width: 30%;
+	padding-left: 150px;
+}
+
+.container {
+	width: 40%;
+	padding-left: 400px;
+}
+
+body {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background-image:
+		url("http://blended-html.com/background-images/bi-background-green.png");
+	background-color: transparent;
+}
+
+form {
+	margin: 0;
+	padding: 50px;
+	padding-left: 100px;
+}
+
+.nav-bar {
+	display: flex;
+	background-color: lightgreen;
+	justify-content: flex-end;
+}
+
+.logo {
+	flex-grow: 1;
+	padding-left: 2rem;
+}
+
+.nav-item {
+	display: inline-block;
+	padding-right: 2rem;
+}
+
+h1 {
+	padding-left: 120px;
+}
+</style>
+
+</h:head>
+
+<h:body>
+<nav class="nav-bar">
+      <h1 class="logo">Student Portal</h1>
+      <ul>
+      <li class="nav-item"><a href="student_login.xhtml"><b>Login</b></a> </li>
+        <li class="nav-item"><a href="application_form.xhtml"><b>Application Form</b></a> </li>
+          <li class="nav-item"><a href="response_form.xhtml"><b>Response Form</b></a> </li>
+        <li class="nav-item"><a href="data_table.xhtml"><b>Data Table</b></a></li>
+        
+      </ul>
+</nav>
+	
+	<h:form>
+		
+		<div class="container">
+		<h1><i>Application Form</i></h1>
+			<div class="name">
+				First Name: <br></br>
+				<h:inputText id="firstName" value="#{student.firstName}"
+					required="true" requiredMessage="Please Enter your First Name" >
+				</h:inputText>
+
+				<br></br> Last Name: <br></br>
+				<h:inputText id="lastName" value="#{student.lastName}"
+					required="true" requiredMessage="Please Enter your Last Name">
+				</h:inputText>
+			</div>
+
+			<div class="semester">
+
+				Semester: <br></br>
+				<h:inputText id="semester" value="#{student.semester}"
+					required="true" requiredMessage="Please Enter your Semester"></h:inputText>
+				<br></br> Section: <br></br>
+				<h:inputText id="section" value="#{student.section}" required="true"
+					requiredMessage="Please Enter your Section"></h:inputText>
+
+			</div>
+
+
+
+			<div>
+				Degree: <br></br>
+				<h:inputText id="degree" value="#{student.degree}" required="true"
+					requiredMessage="Please Enter your Ongoing Degree"></h:inputText>
+				<br></br> Country: <br></br>
+				<h:selectOneMenu value="#{student.country}" required="true"
+					requiredMessage="Please Select Your Country">
+					<p:selectItems value="#{student.countryCount}"></p:selectItems>
+
+				</h:selectOneMenu>
+			</div>
+
+
+
+			<div class="button">
+				<h:commandButton value="Submit" action="application_data">
+				</h:commandButton>
+			</div>
+
+
+		</div>
+
+	</h:form>
+
+</h:body>
+
+</html>

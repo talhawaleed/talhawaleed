@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>CRUD Form Response</title>
+	<style>
+<!--
+.container {
+	width: 40%;
+	padding-left: 100px;
+}
+
+body {
+	background-image:
+		url("https://i0.wp.com/www.wallpapersun.com/wp-content/uploads/2021/10/Brown-Aesthetic-Wallpaper-4.jpg");
+}
+form {
+	padding: 160px;
+	padding-left: 250px;
+	padding-top: 100px;
+}
+-->
+</style>
+</h:head>
+
+<h:body>
+
+	
+	<h:form>
+		<div class="container">
+		<h1>Application Form Data</h1>
+			<h:dataTable>
+
+				<h:column>
+
+					<f:facet name="header">Name</f:facet>
+    				#{student.firstName} #{student.lastName}
+    				}
+    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Semester</f:facet>
+    				#{student.semester} #{student.section}
+    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Degree</f:facet>
+    				#{student.degree}
+    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Country</f:facet>
+    				#{student.country}
+    			</h:column>
+
+			</h:dataTable>
+		</div>
+	</h:form>
+	<!-- 
+		Student Name: #{student.firstName} #{student.lastName} 
+		
+		<br></br>
+		
+		Student Semester is: #{student.semester} #{student.section}
+		<br></br>
+		Enrolled In: #{student.degree}
+		<br></br>
+		Belongs To: #{student.country}
+	
+	
+			 -->
+</h:body>
+
+</html>

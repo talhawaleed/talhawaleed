@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Menu Bar</title>
+	
+</h:head>
+<style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: lightblue;
+  justify-content: flex-end;
+}
+
+.logo {
+  flex-grow: 1;
+  padding-left: 2rem;
+}
+
+.nav-item {
+  display: inline-block;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+</style>
+
+<h:body>
+
+<nav class="nav-bar">
+      <h1 class="logo">Student Portal</h1>
+      <ul>
+        <li class="nav-item"><a href="application_form.xhtml">Application Form</a> </li>
+         <li class="nav-item"><a href="student_login.xhtml">Login</a> </li>
+          <li class="nav-item"><a href="response_form.xhtml">Response Form</a> </li>
+        <li class="nav-item"><a href="data_table.xhtml">Data Table</a></li>
+        
+      </ul>
+</nav>
+</h:body>
+
+</html>

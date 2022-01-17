@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+	<title>Login Page</title>
+	<style>
+Body {
+	font-family: Calibri, Helvetica, sans-serif;
+	background-image:
+		url("https://www.itl.cat/pngfile/big/157-1571640_hd-wallpapers-for-website-background.jpg");
+}
+
+button {
+	background-color: #4CAF50;
+	width: 100%;
+	color: orange;
+	padding: 15px;
+	margin: 10px 0px;
+	border: none;
+	cursor: pointer;
+}
+
+form {
+	padding: 50px;
+	padding-left: 500px;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	border: 2px solid green;
+	box-sizing: border-box;
+}
+
+.button {
+	width: 30px;
+}
+
+button:hover {
+	opacity: 0.7;
+}
+
+h1 {
+	padding-left: 30px;
+}
+
+.container {
+	width: 40%;
+	padding: 25px;
+	padding-bottom: 100px;
+	background-color: white;
+}
+</style>
+</h:head>
+<h:body>
+
+	<h:form>
+		<div class="container">
+
+			<h1>
+				<i>Student Login Form</i>
+			</h1>
+			<br></br> <b>UserName:</b> <br></br>
+			<h:inputText id="username" type="text" required="true"></h:inputText>
+			
+			<br></br> <b>Password:</b> <br></br>
+			<h:inputText id="password" type="password" required="true">
+			</h:inputText>
+			
+
+			<br></br>
+			<h:selectBooleanCheckbox type="checkbox" checked="checked">
+				<b><i>Remember me</i></b>
+			</h:selectBooleanCheckbox>
+			<br></br> <br></br>
+			<div class="button">
+				<h:commandButton value="Submit" action="application_form">
+				</h:commandButton>
+			</div>
+
+		</div>
+	</h:form>
+</h:body>
+</html>
